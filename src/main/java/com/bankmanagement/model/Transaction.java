@@ -7,24 +7,18 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-public class User {
+public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String bank_account_number;
 
-    private String bank_account_name;
+    private String transaction_type;
 
-    private String phone_number;
+    private Double money;
 
-    private String email;
-
-    private Double balance;
-
-//    @ManyToOne
-//    @JoinColumn(name = "bank_id")
-//    private Bank bank;
+    private LocalDateTime time;
 
     private LocalDateTime created_at;
 
